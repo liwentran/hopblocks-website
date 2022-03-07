@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #000;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.section-title {
+  text-align: center;
+  padding: 60px 0 15px 0;
+}
+
+.container-xl {
+  margin: auto;
+  vertical-align: center;
+  padding: 0 15px 0 15px;
+  max-width: 1280px;
+}
+
+.container-m {
+  margin: auto;
+  vertical-align: center;
+  padding: 0 15px 0 15px;
+  max-width: 1080px;
+}
+
+.container-s {
+  margin: auto;
+  vertical-align: center;
+  padding: 0 15px 0 15px;
+  max-width: 940px;
+}
+
+.navigation {
+  height: 100px;
+}
+.navigation a {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.navigation__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.navigation__content .logo {
+  float: left;
+}
+.navigation__content .logo img {
+  height: 100px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.navigation__content .menu {
+  position: center;
+}
+.navigation__content .menu__items {
+  flex: 0 0 auto;
+}
+.navigation__content .menu a {
+  padding: 20px;
+}
+.navigation__content .socials {
+  float: right;
+}
+
+.intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  max-height: 620px;
+  min-height: 520px;
+  height: auto;
+  padding: 40px 0px 0px 0px;
+  justify-content: center;
+  background-image: url("../assets/intro-background.jpeg");
+  background-position: 50% 100%;
+  background-size: cover;
+}
+.intro__text {
+  font-size: 200%;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px #000;
+}
+
+.project {
+  display: block;
+}
+.project__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.project__image img {
+  width: 100%;
+  padding: 25px 40px 25px 0;
+}
+.project__text {
+  width: 60%;
+  text-align: center;
+}
+.project p {
+  line-height: 2.5;
+}
+.project h2 {
+  line-height: 1;
+  font-size: 350%;
+}
+.project h3 {
+  line-height: 2.5;
+  font-size: 200%;
+}
+
+.roadmap .grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.roadmap .grid__column {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.roadmap #left {
+  padding-right: 20px;
+}
+.roadmap #right {
+  padding-left: 20px;
+}
+
+.team__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding-top: 25px;
+}
+.team img {
+  object-fit: cover;
+  border-radius: 50%;
+}
+.team__item {
+  text-align: center;
+}
+.team__item__name {
+  font-weight: 700;
+  line-height: 2;
+}
+
+/*# sourceMappingURL=main.css.map */
