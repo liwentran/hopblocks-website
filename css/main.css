@@ -69,7 +69,10 @@ a {
   padding-bottom: 15px;
 }
 .navigation__content .menu {
-  position: center;
+  position: absolute;
+  left: 50%;
+  top: 6%;
+  transform: translate(-50%, -50%);
 }
 .navigation__content .menu__items {
   flex: 0 0 auto;
@@ -79,6 +82,27 @@ a {
 }
 .navigation__content .socials {
   float: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.navigation__content .socials__button {
+  background-color: #fff;
+  width: 30px;
+  height: 30px;
+  margin: 0px 20px 0px 0px;
+  border-radius: 100px;
+}
+.navigation__content .socials img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+.navigation__content .socials #socials-twitter {
+  padding: 2px;
+}
+.navigation__content .socials #socials-discord {
+  padding: 5px;
 }
 
 .intro {
@@ -89,7 +113,7 @@ a {
   max-height: 620px;
   min-height: 520px;
   height: auto;
-  padding: 40px 0px 0px 0px;
+  padding: 40px 0px 40px 0px;
   justify-content: center;
   background-image: url("../assets/intro-background.jpeg");
   background-position: 50% 100%;
@@ -117,16 +141,12 @@ a {
 .project__text {
   width: 60%;
   text-align: center;
-}
-.project p {
-  line-height: 2.5;
+  line-height: 1.5;
 }
 .project h2 {
-  line-height: 1;
   font-size: 350%;
 }
 .project h3 {
-  line-height: 2.5;
   font-size: 200%;
 }
 
@@ -142,12 +162,46 @@ a {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  padding: 10px 0px;
+  width: 46%;
+}
+.roadmap .grid__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: auto;
+  flex-wrap: nowrap;
+  margin-bottom: 40px;
+}
+.roadmap .grid__item__image {
+  width: auto;
+  height: auto;
+  padding: 10px;
+  margin-right: 20px;
+  border-radius: 100%;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+.roadmap .grid__item img {
+  position: static;
+  width: auto;
+  max-width: 80px;
+  border-radius: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.roadmap .grid__item__text {
+  line-height: 1.5;
+}
+.roadmap .grid__item__text h3 {
+  text-transform: uppercase;
 }
 .roadmap #left {
-  padding-right: 20px;
+  padding-right: 10px;
 }
 .roadmap #right {
-  padding-left: 20px;
+  padding-left: 10px;
 }
 
 .team__row {
