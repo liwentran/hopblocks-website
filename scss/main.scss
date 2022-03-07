@@ -1,0 +1,206 @@
+@import 'config';
+
+@function weight($weight-name) {
+  @return map-get($font-weights, $weight-name);
+}
+
+@mixin flex-center($direction) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin mobile {
+  @media (max-width: 800px) {
+    @content
+  }
+}
+
+@mixin container {
+  margin: auto;
+  vertical-align: center;
+  padding: 0 15px 0 15px;
+}
+
+body {
+  background: $background-primary;
+  font-weight: weight(regular);
+  font-size: 16px;
+  color: $text-primary;
+  //display: block;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+  //line-height: 1;
+}
+
+h1, h2, h3 {
+  font-weight: weight(bold);
+}
+
+a {
+  text-decoration: none;
+  color: $text-primary;
+}
+
+.section-title {
+  text-align: center;
+  padding: 60px 0 15px 0;
+}
+
+
+.container-xl {
+  @include container;
+  max-width: 1280px;
+}
+
+.container-m {
+  @include container;
+  max-width: 1080px;
+}
+
+.container-s {
+  @include container;
+  max-width: 940px;
+}
+
+
+.navigation {
+  height: 100px;
+
+  a {
+    text-transform: uppercase;
+    font-weight: weight(bold);
+  }
+
+  &__content {
+    @include flex-center(row);
+
+    .logo {
+      img {
+        height: 100px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+
+      float: left;
+    }
+
+    .menu {
+      position: center;
+
+      &__items {
+        flex: 0 0 auto;
+      }
+
+      a {
+        padding: 20px;
+      }
+    }
+
+    .socials {
+      float: right;
+    }
+  }
+}
+
+.intro {
+
+  @include flex-center(column);
+  max-height: 620px;
+  min-height: 520px;
+  height: auto;
+  padding: 40px 0px 0px 0px;
+  justify-content: center;
+
+  background-image: url("../assets/intro-background.jpeg");
+  background-position: 50% 100%;
+  background-size: cover;
+
+  &__content {
+  }
+
+  &__text {
+    font-size: 200%;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px $background-primary;
+  }
+}
+
+.project {
+  display: block;
+
+  &__content {
+    @include flex-center(row);
+  }
+
+  &__image {
+
+    img {
+      width: 100%;
+      padding: 25px 40px 25px 0;
+    }
+  }
+
+  &__text {
+    width: 60%;
+    text-align: center;
+  }
+
+  p {
+    line-height: 2.5;
+  }
+
+  h2 {
+    line-height: 1;
+    font-size: 350%;
+  }
+
+  h3 {
+    line-height: 2.5;
+    font-size: 200%;
+  }
+}
+
+.roadmap {
+  .grid {
+    @include flex-center(row);
+    align-items: flex-start;
+
+    &__column {
+      @include flex-center(column);
+    }
+  }
+
+  #left {
+    padding-right: 20px;
+  }
+
+  #right {
+    padding-left: 20px;
+  }
+}
+
+.team {
+  &__row {
+    @include flex_center(row);
+    padding-top: 25px;
+  }
+
+  img {
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  &__item {
+    text-align: center;
+
+    &__name {
+      font-weight: weight(bold);
+      line-height: 2;
+    }
+  }
+}
+
+.faq {
+
+}

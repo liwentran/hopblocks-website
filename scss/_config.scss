@@ -20,3 +20,9 @@ $font-weights: (
         "bold": 700
 );
 
+// resets
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
